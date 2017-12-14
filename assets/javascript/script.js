@@ -1,6 +1,5 @@
 $(document).ready(function() {
-
-  //Create global variables
+//global variables
   var gemNumbersArr = [];
   var gemNumbers;
   var targetNumber;
@@ -8,12 +7,12 @@ $(document).ready(function() {
   var wins = 0;
   var losses = 0;
 
-  function initializeData() {
+  function start() {
     gemNumbersArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
     targetNumber;
     result = 0;
 
-    // Get a random number between 19-120 at the start of the game
+//randomize number
     do {
       var random = Math.random();
       targetNumber = Math.round(random * 120);
@@ -22,7 +21,7 @@ $(document).ready(function() {
     $("#randonum").text(targetNumber);
     $("#result").text(result);
 
-    // Assign score to each crystal, score is reset when restarting the game
+//assign each gem a randomized value, value is reset when restarting the game
     gemNumbers = $("#gem-numbers");
     jQuery.data(gemNumbers, "gems", {
       rubyNumber: gemNumbersArr[Math.floor(Math.random() * gemNumbersArr.length)],
@@ -40,21 +39,21 @@ $(document).ready(function() {
   function checkScores() {
     if (result === targetNumber) {
       wins++;
-      $("#scores").text("You won!!!");
+      $("#scores").text("You Win!");
       $("#wins").text(wins);
     }
     else if (result > targetNumber) {
       losses++;
-      $("#scores").text("You lost!!!");
+      $("#scores").text("You Loose!");
       $("#losses").text(losses);
     }
     else {
       return;
     }
-    initializeData();
+    start();
   }
 
-  // Calculate total scores
+//calculate total scores
   $("#ruby").on("click", function() {
     result += jQuery.data(gemNumbers, "gems").rubyNumber;
     $("#result").text(result);
@@ -79,7 +78,7 @@ $(document).ready(function() {
     checkScores();
   });
 
-  //Call function initializeData to set the variables
-  initializeData();
+  //Call function start to set the variables
+  start();
 
 });

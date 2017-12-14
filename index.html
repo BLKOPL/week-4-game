@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Gem Grab</title>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link href="https://fonts.googleapis.com/css?family=Spectral+SC" rel="stylesheet">
+  <!-- Added a link to Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <!-- Added link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="row text-center m-1">
+    <div class="col-md-12">
+      <div class="bgimg">
+        <h1 class="p-3">My gem is bad and boujee</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="row m-1">
+    <div class="col-md-12">
+      <div class="instructions bgimg sizef">
+        <p>Just below these instructions, there is a randomly selected number on the left side of the screen.</p>
+        <p> To the right of that is a "wins" and "losses" tracker.</p>
+        <p>There are four gems below. By clicking on a gem you will add a specific amount of points to your total score (located all the way at the bottom of the page).</p>
+        <p>You win the game by matching your total scrore to therandomly selected number, you lose the game if your total score goes above it.</p>
+        <p>The value of each gem is hidden from you until clicked.</p>
+        <p>The value of each gem will change whenever a new game is initiated.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row text-center m-3">
+    <div class="col-md-6 scores bgimg">
+      <h2 id="randonum" class="size"></h2>
+    </div>
+    <div class="col-md-6 bgimg sizef">
+      <p id="scores" class="pt-2"></p>
+      <p class="pt-2">Wins: <span id="wins"></span></p>
+      <p>Losses: <span id="losses"></span></p>
+    </div>
+  </div>
+
+  <div class="row m-2 text-center">
+    <div id="gem-numbers" class="col-md-12 bgimg">
+      <img id="ruby" class="img-responsive img-icon p-2 mr-2 picture" src="assets/images/ruby.png" alt="ruby">
+      <img id="opal" class="img-responsive img-icon p-2 mr-2 picture" src="assets/images/opal.png" alt="opal">
+      <img id="diamond" class="img-responsive img-icon p-2 mr-2 picture" src="assets/images/diamond.png" alt="diamond">
+      <img id="emerald" class="img-responsive img-icon p-2 mr-2 picture" src="assets/images/emerald.png" alt="emerald">
+    </div>
+  </div>
+
+  <div class="row m-2 bgimg center">
+    <div class="col-md-12 bgimg">
+      <p class="total-score pl-4 sizef">Your total is:</p>
+    </div>
+  </div>
+
+  <div class="row m-2 bgimg">
+    <div class="col-md-12 bgimg center">
+      <h2 id="result" class="total-score p-4 size"></h2>
+    </div>
+  </div>
+
+  <script src="assets/javascript/script.js"></script>
+
+</body>
+
+</html>

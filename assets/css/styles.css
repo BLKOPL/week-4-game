@@ -1,0 +1,53 @@
+body {
+  padding-bottom: 40px;
+  width: 100%;
+  margin: 0 auto;
+  background-image: url("../images/geom.png");
+}
+
+h1 {
+  font-family: 'Spectral SC', serif;
+  color: white;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.instructions {
+  color: white;
+  padding: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.bgimg{
+  background-image: url("../images/geom.png");
+  color: white;
+}
+
+.scores {
+  padding: 30px;
+}
+
+.total-score {
+  color: white;
+}
+
+.img-icon {
+  width: 10%;
+  background: white;
+  display: inline;
+}
+
+.center {
+  text-align: center;
+}
+
+.size {
+  font-size: 60px;
+}
+
+.sizef {
+  font-size: 20px;
+}
